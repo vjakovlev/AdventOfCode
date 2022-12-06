@@ -21,7 +21,7 @@ namespace AdventOfCode2022.Days
             var task1Dock = GenerateWorkloadSchema(docks);
             var task2Dock = GenerateWorkloadSchema(docks);
 
-            var moves = GeenerateMoves(instructions);
+            var moves = GenerateMoves(instructions);
 
             //result1
             Console.WriteLine(Task1(task1Dock, moves));
@@ -30,7 +30,7 @@ namespace AdventOfCode2022.Days
             Console.WriteLine(Task2(task2Dock, moves));
         }
 
-        private static List<MoveInput> GeenerateMoves(string[] instructions) 
+        private static List<MoveInput> GenerateMoves(string[] instructions) 
         {
             List<MoveInput> moves = new List<MoveInput>();
 
@@ -42,7 +42,6 @@ namespace AdventOfCode2022.Days
                     Move = int.Parse(temp[1]),
                     From = int.Parse(temp[3]) - 1,
                     To = int.Parse(temp[5]) - 1
-
                 };
 
                 moves.Add(moveInput);
