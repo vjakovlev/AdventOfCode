@@ -1,20 +1,15 @@
-﻿using AdventOfCode2022.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AdventOfCode.Common;
 
-namespace AdventOfCode2022.Days
+namespace AdventOfCode._2022
 {
     public static class Day1
     {
-        public static void Run() 
+        public static void Run()
         {
-            var input = InputReader.ReadInput("Day1.txt");
+            var input = InputReader.ReadInput("Day1.txt", "2022");
             string[] lines = input.Split("\r\n");
 
-            List<int> TotalCaloriesByElf = new List<int>();
+            var TotalCaloriesByElf = new List<int>();
 
             var totalCaloresPerElf = 0;
 
@@ -34,7 +29,7 @@ namespace AdventOfCode2022.Days
             //result1
             Console.WriteLine(TotalCaloriesByElf.Max());
 
-            List<int> tempArr = new List<int>();
+            var tempArr = new List<int>();
 
             for (int i = 0; i < 3; i++)
             {

@@ -1,17 +1,12 @@
-﻿using AdventOfCode2022.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AdventOfCode.Common;
 
-namespace AdventOfCode2022.Days
+namespace AdventOfCode._2022
 {
     public static class Day4
     {
         public static void Run()
         {
-            var input = InputReader.ReadInput("Day4.txt");
+            var input = InputReader.ReadInput("Day4.txt", "2022");
             string[] lines = input.Split("\r\n");
 
             var result1 = 0;
@@ -19,7 +14,7 @@ namespace AdventOfCode2022.Days
 
             foreach (var line in lines)
             {
-                if (ProcessLines(line)) 
+                if (ProcessLines(line))
                 {
                     result1++;
                 }
@@ -40,7 +35,7 @@ namespace AdventOfCode2022.Days
             Console.WriteLine(result2);
         }
 
-        private static bool ProcessLines(string input) 
+        private static bool ProcessLines(string input)
         {
             var left = GenerateArray(input.Split(",")[0]);
             var right = GenerateArray(input.Split(",")[1]);
@@ -59,11 +54,11 @@ namespace AdventOfCode2022.Days
             return left.Intersect(right).Any();
         }
 
-        private static bool CheckIfExits(List<int> arr1, List<int> arr2) 
+        private static bool CheckIfExits(List<int> arr1, List<int> arr2)
         {
             foreach (var item in arr2)
             {
-                if (!arr1.Contains(item)) 
+                if (!arr1.Contains(item))
                 {
                     return false;
                 }
@@ -72,7 +67,7 @@ namespace AdventOfCode2022.Days
             return true;
         }
 
-        private static List<int> GenerateArray(string input) 
+        private static List<int> GenerateArray(string input)
         {
             var fromTo = input.Split("-").ToArray();
 

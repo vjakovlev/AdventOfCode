@@ -1,19 +1,13 @@
-﻿using AdventOfCode2022.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AdventOfCode.Common;
 
-namespace AdventOfCode2022.Days
+namespace AdventOfCode._2022
 {
     public static class Day6
     {
-        public static void Run() 
+        public static void Run()
         {
-            string input = InputReader.ReadInput("Day6.txt");
-            char[] chars = input.ToCharArray();
+            var input = InputReader.ReadInput("Day6.txt", "2022");
+            var chars = input.ToCharArray();
 
             //result1
             Console.WriteLine(DetectMarker(chars, 4));
@@ -22,7 +16,7 @@ namespace AdventOfCode2022.Days
             Console.WriteLine(DetectMarker(chars, 14));
         }
 
-        public static int DetectMarker(char[] chars, int markerLength) 
+        public static int DetectMarker(char[] chars, int markerLength)
         {
             var startPosition = 0;
 

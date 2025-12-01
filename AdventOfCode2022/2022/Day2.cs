@@ -1,17 +1,12 @@
-﻿using AdventOfCode2022.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AdventOfCode.Common;
 
-namespace AdventOfCode2022.Days
+namespace AdventOfCode._2022
 {
     public static class Day2
     {
-        public static void Run() 
+        public static void Run()
         {
-            var input = InputReader.ReadInput("Day2.txt");
+            var input = InputReader.ReadInput("Day2.txt", "2022");
             string[] lines = input.Split("\r\n");
 
             var totalScore1 = 0;
@@ -34,7 +29,7 @@ namespace AdventOfCode2022.Days
 
         }
 
-        private static int CalculateResultPerRound2(string opponentChoice, string myChoice) 
+        private static int CalculateResultPerRound2(string opponentChoice, string myChoice)
         {
             var totalRoundScore = 0;
 

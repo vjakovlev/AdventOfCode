@@ -1,18 +1,12 @@
-﻿using AdventOfCode2022.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AdventOfCode.Common;
 
-namespace AdventOfCode2022.Days
+namespace AdventOfCode._2022
 {
     public static class Day5
     {
         public static void Run()
         {
-            var input = InputReader.ReadInput("Day5.txt");
+            var input = InputReader.ReadInput("Day5.txt", "2022");
             string[] lines = input.Split("\r\n\r\n");
 
             string[] docks = lines[0].Split("\r\n");
@@ -30,7 +24,7 @@ namespace AdventOfCode2022.Days
             Console.WriteLine(Task2(task2Dock, moves));
         }
 
-        private static List<MoveInput> GenerateMoves(string[] instructions) 
+        private static List<MoveInput> GenerateMoves(string[] instructions)
         {
             List<MoveInput> moves = new List<MoveInput>();
 
@@ -50,7 +44,7 @@ namespace AdventOfCode2022.Days
             return moves;
         }
 
-        private static List<List<string>> GenerateWorkloadSchema(string[] workLoad) 
+        private static List<List<string>> GenerateWorkloadSchema(string[] workLoad)
         {
             List<List<string>> stacks = new List<List<string>>();
 
@@ -79,7 +73,7 @@ namespace AdventOfCode2022.Days
             return stacks;
         }
 
-        private static string Task1(List<List<string>> stacks, List<MoveInput> moves) 
+        private static string Task1(List<List<string>> stacks, List<MoveInput> moves)
         {
             foreach (var item in moves)
             {
@@ -96,7 +90,7 @@ namespace AdventOfCode2022.Days
             return result.ToString();
         }
 
-        private static string Task2(List<List<string>> stacks, List<MoveInput> moves) 
+        private static string Task2(List<List<string>> stacks, List<MoveInput> moves)
         {
             foreach (var item in moves)
             {
@@ -111,7 +105,7 @@ namespace AdventOfCode2022.Days
             }
 
             return result.ToString();
-        }  
+        }
 
         public static void Move9000(List<List<string>> stacks, MoveInput input)
         {

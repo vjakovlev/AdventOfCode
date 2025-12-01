@@ -1,21 +1,15 @@
-﻿using AdventOfCode2022.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AdventOfCode.Common;
 
-namespace AdventOfCode2022.Days
+namespace AdventOfCode._2022
 {
     public static class Day3
     {
-        public static void Run() 
+        public static void Run()
         {
-            var input = InputReader.ReadInput("Day3.txt");
+            var input = InputReader.ReadInput("Day3.txt", "2022");
             string[] lines = input.Split("\r\n");
 
-            List<char> chars = new List<char>();
+            var chars = new List<char>();
 
             foreach (var item in lines)
             {
@@ -32,11 +26,11 @@ namespace AdventOfCode2022.Days
             //result1
             Console.WriteLine(results.Sum());
 
-            List<int> results2 = new List<int>();
+            var results2 = new List<int>();
 
-            for (int i = 0; i < lines.Length; i+=3)
+            for (int i = 0; i < lines.Length; i += 3)
             {
-                results2.Add(ExtractSameCharacterInThreeLines(new List<string> { lines[i], lines[i+1], lines[i+2]}));
+                results2.Add(ExtractSameCharacterInThreeLines(new List<string> { lines[i], lines[i + 1], lines[i + 2] }));
             }
 
             //result2
@@ -51,7 +45,7 @@ namespace AdventOfCode2022.Days
 
             foreach (var character in orderedStrings.First())
             {
-                if (CompareChatInString(character, orderedStrings[1], orderedStrings[2])) 
+                if (CompareChatInString(character, orderedStrings[1], orderedStrings[2]))
                 {
                     chs = character;
                 }
@@ -60,15 +54,15 @@ namespace AdventOfCode2022.Days
             return CalculateScore(chs);
         }
 
-        private static bool CompareChatInString(char c, string str1, string str2) 
-        {    
+        private static bool CompareChatInString(char c, string str1, string str2)
+        {
             foreach (var item in str1)
             {
-                if (c == item) 
+                if (c == item)
                 {
                     foreach (var item2 in str2)
                     {
-                        if (c == item2) 
+                        if (c == item2)
                         {
                             return true;
                         }
@@ -79,8 +73,8 @@ namespace AdventOfCode2022.Days
             return false;
         }
 
-        private static char ExtractSameCharacter(string line) 
-        {            
+        private static char ExtractSameCharacter(string line)
+        {
             var string1 = string.Join("", line.Skip(0).Take(line.Length / 2));
             var string2 = string.Join("", line.Skip(line.Length / 2).Take(line.Length));
 

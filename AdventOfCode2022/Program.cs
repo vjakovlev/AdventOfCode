@@ -1,8 +1,11 @@
-﻿using AdventOfCode2022.Days;
+﻿//2022
 
-//Day1.Run();
+//AdventOfCode._2022.Day1.Run();
 //Day2.Run();
 //Day3.Run();
 //Day4.Run();
 //Day5.Run();
-Day6.Run();
+//Day6.Run();
+
+//2025
+AdventOfCode._2025.Day1.Run();
