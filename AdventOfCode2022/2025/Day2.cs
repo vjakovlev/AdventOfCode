@@ -31,8 +31,8 @@ namespace AdventOfCode._2025
                 }
             }
 
-            Console.WriteLine($"Result: {part1Result.Sum()}");
-            Console.WriteLine($"Result: {part2Result.Sum()}");
+            Console.WriteLine($"Part 1: {part1Result.Sum()}");
+            Console.WriteLine($"Part 2: {part2Result.Sum()}");
         }
 
         public static bool HasIdenticalParts(long number)
