@@ -8,4 +8,5 @@
 //Day6.Run();
 
 //2025
-AdventOfCode._2025.Day1.Run();
+//AdventOfCode._2025.Day1.Run();
+AdventOfCode._2025.Day2.Run();
