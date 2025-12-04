@@ -3,11 +3,11 @@
     public static class InputReader
     {
         private static readonly string ProjectRootPath =
-            Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "Inputs");
+            Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName);
 
         public static string ReadInput(string fileName, string year)
         {
-            return File.ReadAllText(Path.Combine($"{ProjectRootPath}{year}", fileName));
+            return File.ReadAllText(Path.Combine($"{ProjectRootPath}/{year}/inputs", fileName));
         }
     }
 }
